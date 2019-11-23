@@ -1,6 +1,7 @@
 <template>
   <div class="header-with-back">
-    <div @click="$router.back()">←</div>
+    <nuxt-link to="/" v-if="backtohome" style="color: white;">←</nuxt-link>
+    <div @click="$router.back();" v-if="!backtohome">←</div>
     <div><slot></slot></div>
   </div>
 </template>
@@ -26,6 +27,6 @@
 
 <script>
 export default {
-  
+  props: ["backtohome"]
 }
 </script>

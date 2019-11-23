@@ -1,6 +1,6 @@
 <template>
   <div class="tracking-single-page">
-    <header-with-back>การจัดส่ง</header-with-back>
+    <header-with-back backtohome=1>การจัดส่ง</header-with-back>
     <div class="map-curr"></div>
     <div style="text-align: center; font-size: 42pt; font-weight: bold; color: saddlebrown">10 นาที</div>
   </div>

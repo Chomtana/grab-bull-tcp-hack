@@ -19,3 +19,7 @@
 .v-application {
   background-color: #fde992 !important;
 }
+
+a {
+  text-decoration: none;
+}
