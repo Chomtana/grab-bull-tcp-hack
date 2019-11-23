@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box !important;
+}
+
+.chombtn {
+  padding: 8px;
+
+  text-align: center;
+
+  background-color: white;
+  border-radius: 50px;
+  border: solid 1px gray;
+
+  width: 100%;
+
+  color: saddlebrown;
+}
+
+.v-application {
+  background-color: #fde992 !important;
+}
