@@ -121,6 +121,15 @@ export const mutations = {
     state.counter++
   },
   add_picked_menu(state, {menu, amount, unit}) {
-    state.picked_menus.push({...menu, amount, unit});
+    let price = menu.price;
+    if (unit == 'แพ็ค') {
+      price *= menu.perpack;
+    }
+    price*=amount;
+
+    state.picked_menus.push({...menu, price, amount, unit});
+  },
+  delete_picked_menu(state, menui) {
+    state.picked_menus.splice(menui)
   }
 }
