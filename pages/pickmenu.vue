@@ -8,7 +8,7 @@
       <list-flex perRow="1" gap="0">
         <div v-for="(menu, menui) in picked_menus" :key="menui">
           <div style="position: relative;">
-            <div style="position: absolute; top: 8px; right: 12px; color: black; font-size:18pt;">X</div>
+            <div style="position: absolute; top: 8px; right: 12px; color: black; font-size:18pt; z-index: 1000;" @click="delete_picked_menu(menui)">X</div>
             <div>
               <product :img="menu.img" :title="menu.name" :subtitle="menu.amount+' '+menu.unit" :subtitle_right="menu.price+' บาท'" />
             </div>
@@ -57,7 +57,7 @@
 </style>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 import HeaderWithBack from '~/components/HeaderWithBack'
 import ListFlex from '~/components/ListFlex'
 import Product from '~/components/Product'
@@ -72,7 +72,10 @@ export default {
     }
   },
   methods: {
-    
+    ...mapMutations({
+      add_picked_menu: 'add_picked_menu',
+      delete_picked_menu: 'delete_picked_menu'
+    })
   },
   components: {
     HeaderWithBack,

@@ -130,6 +130,7 @@ export const mutations = {
     state.picked_menus.push({...menu, price, amount, unit});
   },
   delete_picked_menu(state, menui) {
-    state.picked_menus.splice(menui)
+    console.log("dsasasd")
+    state.picked_menus.splice(menui, 1)
   }
 }
